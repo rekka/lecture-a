@@ -96,3 +96,54 @@ def quicksort(x):
     + [v for v in x if v == pivot]\
     + quicksort([v for v in x if v > pivot])
 ```
+
+# Exercises
+
+## Full inverse of a dictionary
+
+For a dictionary
+
+```python
+>>> d = {x: x**2 for x in range(10)}
+>>> d
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+```
+
+the "inverse" is the dictionary
+
+```python
+>>> {v: k for k, v in d.items()}
+{0: 0, 1: 1, 4: 2, 9: 3, 16: 4, 25: 5, 36: 6, 49: 7, 64: 8, 81: 9}
+```
+
+However, the above works well only if every value has exactly one key
+that maps to it.
+
+```python
+>>> d = {x: x**2 for x in range(-5, 5)}
+>>> d
+{-5: 25, -4: 16, -3: 9, -2: 4, -1: 1, 0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+>>> {v: k for k, v in d.items()}
+{25: -5, 16: 4, 9: 3, 4: 2, 1: 1, 0: 0}
+```
+
+Notice that above we are missing some value -> key mappings.
+
+1. Write a function that finds the _full inverse_ of a given dictionary:
+
+    ```python
+    >>> d = {x: x**2 for x in range(-5, 5)}
+    >>> full_inverse(d)
+    {0: [0], 1: [-1, 1], 4: [-2, 2], 9: [-3, 3], 16: [-4, 4], 25: [-5]}
+    ```
+2. Write a function that takes two dictionaries and returns `True`
+   exactly when the second is the full inverse of the first one.
+   Since this function is meant for testing the previous one, do **not** use
+   the following code.
+
+    ```python
+    def check_full_inverse(d, i):
+        return i == full_inverse(d)
+    ```
+
+
