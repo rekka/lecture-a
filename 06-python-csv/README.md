@@ -42,7 +42,7 @@ print(data[:10])
 
 2. What is the total number of births each year (2000--2014)?
 
-3. Which month/day of the way has the most births overall/at each given
+3. Which month/day of the week has the most births overall/at each given
    year?
 
 # Basic plotting with `matplotlib`
