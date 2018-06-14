@@ -271,3 +271,17 @@ plt.plot(x, y, '.')
 
 Plot the function and the random samples from exercise Monte-Carlo
 integration above.
+
+### Exercise
+
+Solve the system
+
+```
+x' = -y
+y' = x
+x(0) = 1
+y(0) = 0
+```
+
+using explicit Euler's method and plot the solution for different time
+steps 1, 0.1, 0.01.
