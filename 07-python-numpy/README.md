@@ -202,6 +202,13 @@ np.maximum(x, 0)
 # = array([0. , 0. , 0. , 0. , 0. , 0. , 0.1, 0.2, 0.3, 0.4, 0.5])
 ```
 
+#### Exercise: Find an approximate solution of an equation
+
+Find an approximate solution of exp(x) + x = 0 on the interval [-1, 1]
+with accuracy 0.001.
+
+Hint: `np.abs`, `np.argmin`
+
 ### Random arrays
 
 Module `numpy.random`.
