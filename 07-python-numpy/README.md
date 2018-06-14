@@ -14,6 +14,15 @@ y = np.array([2, 3, 4])
 z = x + y
 ```
 
+### References
+
+- [Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/)
+- [100 numpy exercises with hint](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_hint.md)
+- [Quickstart tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html)
+
+
+### Basic operations
+
 Common to create arrays using `linspace`:
 
 ```python
