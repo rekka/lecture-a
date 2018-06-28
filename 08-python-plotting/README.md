@@ -21,10 +21,10 @@ np.random.rand(3,2)
 
 ### Exercise: Estimate π using the Monte-Carlo method
 
-The are of the disc _D_ with radius 1 is exactly π. The are of the
+The area of the disc _D_ with radius 1 is exactly π. The area of the
 square _Q_ with edge of size 2 is 4. Let us center both of these at the
 origin (0,0). Then _D_ ⊂ _Q_. If we generate a sequence of uniformly
-distributed point in _Q_, approximately π/4 should be in _D_. Use this
+distributed points in _Q_, approximately π/4 should be in _D_. Use this
 to estimate the value of π. Use 10, 100, 1000, 1000000 points.
 
 Hint: Use `np.random.rand`, conditions to check if a point is in a disc,
