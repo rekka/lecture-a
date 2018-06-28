@@ -106,7 +106,7 @@ steps 1, 0.1, 0.01.
 
 ### More commands to consider
 
-`plt.plot(xs, ys, [style])`
+- `plt.plot(xs, ys, [style])`
 : Plots data
 
     `style`
@@ -118,37 +118,37 @@ steps 1, 0.1, 0.01.
     `label = '...'`
     : The label for legend.
 
-`plt.scatter`
+- `plt.scatter`
 : Scatter plot of points.
 
-`plt.countour`
+- `plt.countour`
 : Contour plot of 2D data on a grid.
 
-`plt.tricontour(xs, ys, zs)`
+- `plt.tricontour(xs, ys, zs)`
 : Contour plot of 2D data without a grid.
 
-`plt.subplot(r, c, i)`
+- `plt.subplot(r, c, i)`
 : Creates a subplot.
 
     `aspect = 'equal'`
     : Set aspect ratio of the subplot to 1:1.
 
-`plt.figure`
+- `plt.figure`
 : Create a new figure.
 
     `figsize = (w, h)`
     : Size of the produced figure in inches.
 
-`plt.legend`
+- `plt.legend`
 : Enables legend.
 
-`plt.xrange`, `plt.yrange`
+- `plt.xrange`, `plt.yrange`
 : Set range.
 
-`plt.show`
+- `plt.show`
 : Show plot.
 
-`plt.clf()`
+- `plt.clf()`
 : Clears figure.
 
 
