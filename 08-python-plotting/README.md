@@ -79,6 +79,12 @@ plt.subplot(111, aspect = 'equal')
 plt.plot(x, y, '.')
 ```
 
+Learn more at
+
+- [matplotlib.org](https://matplotlib.org/index.html)
+
+- [matplotlib tutorials](https://matplotlib.org/tutorials/index.html)
+
 ### Exercise
 
 Plot the function and the random samples from exercise Monte-Carlo
@@ -97,3 +103,52 @@ y(0) = 0
 
 using explicit Euler's method and plot the solution for different time
 steps 1, 0.1, 0.01.
+
+### More commands to consider
+
+`plt.plot(xs, ys, [style])`
+: Plots data
+
+    `style`
+    : Marker and line style: markers `o`, `s`, `x`, `+`, etc., lines
+      `-`, `--`, `:`
+
+      Example: `'o-'`
+
+    `label = '...'`
+    : The label for legend.
+
+`plt.scatter`
+: Scatter plot of points.
+
+`plt.countour`
+: Contour plot of 2D data on a grid.
+
+`plt.tricontour(xs, ys, zs)`
+: Contour plot of 2D data without a grid.
+
+`plt.subplot(r, c, i)`
+: Creates a subplot.
+
+    `aspect = 'equal'`
+    : Set aspect ratio of the subplot to 1:1.
+
+`plt.figure`
+: Create a new figure.
+
+    `figsize = (w, h)`
+    : Size of the produced figure in inches.
+
+`plt.legend`
+: Enables legend.
+
+`plt.xrange`, `plt.yrange`
+: Set range.
+
+`plt.show`
+: Show plot.
+
+`plt.clf()`
+: Clears figure.
+
+
