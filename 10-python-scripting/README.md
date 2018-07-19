@@ -8,14 +8,14 @@ great language for general scripting.
 
 Write a python script `build.py` that will look for all `*.c` and `*.cpp` files in
 the subdirectory `./src` and compile them into a directory `./bin`. It
-should preserve directory structure.
+should preserve the directory structure.
 
 - By default, it should compile them without optimizations into `./bin/debug`.
 If a command line flag `-O` is provided, it should compile them with
 optimizations enabled (`-O3`) and save them in `./bin/release`.
 
     ```
-    $ tree                                                                         master *=
+    $ tree
     .
     ├── bin
     │   ├── debug
@@ -37,13 +37,13 @@ optimizations enabled (`-O3`) and save them in `./bin/release`.
     ```
 
 - To save time, it should recompile only the files that have changed by
-  comparing the modification date of the source file and the target
+  comparing the modification time of the source file and the target
   binary.
 
 ## Running external commands: module `subprocess`
 
-Allows you to run external commands, provide standard input and capture
-standard output and return code.
+Allows you to run external commands, provide the standard input and capture
+the standard output and the return code.
 
 **Example.** Get information about the system by running the system
  command `uname -a`.
@@ -74,7 +74,7 @@ usage: rm [-f | -i] [-dPRrvW] file ...
 64
 ```
 
-But the error message was printed to screen. This is because errors are
+But the error message was printed to the screen. This is because errors are
 printed by convention to `stderr`, not `stdout`. To capture the error
 message, add `stderr=subprocess.PIPE`.
 
@@ -84,9 +84,14 @@ message, add `stderr=subprocess.PIPE`.
 b'usage: rm [-f | -i] [-dPRrvW] file ...\n       unlink file\n'
 ```
 
-**Exercise.** Use `subprocess.run` to compile a C file without or with
+**Exercise.**
+
+- Use `subprocess.run` to compile a C file without or with
 optimizations enabled. If a compiler error is detected, print a nice
 error message.
+
+    _Hint._ To convert `result.stdout` or `result.stderr` to string use
+    `result.stdout.decode('utf-8')`.
 
 ## Working with paths: module `pathlib`
 
@@ -247,19 +252,19 @@ else:
 Now we can run the script with command line arguments.
 
 ```bash
-$ python build.py                                                              master *=
+$ python build.py
 Optimizations disabled
-$ python build.py -O                                                           master *=
+$ python build.py -O
 Optimizations enabled
 ```
 
 `argparse` provides nice error messages and help.
 
 ```bash
-$ python build.py -o                                                           master *=
+$ python build.py -o
 usage: build.py [-h] [-O]
 build.py: error: unrecognized arguments: -o
-$ python build.py -h                                                           master *=
+$ python build.py -h
 usage: build.py [-h] [-O]
 
 optional arguments:
@@ -296,7 +301,7 @@ os.stat_result(st_mode=33188, st_ino=8604286092, st_dev=16777220, st_nlink=1, st
 **Exercise.**
 
 - Compile the given `*.c` file only if it was modified after it was
-  compiled before.
+  last compiled.
 
     _Hint._ Compare the last modification times of the file and its
     resulting binary (only if it already exists!).
