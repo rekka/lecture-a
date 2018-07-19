@@ -9,10 +9,10 @@ args = parser.parse_args()
 
 src = Path('src')
 if args.O:
-    build = Path('build/release')
+    build = Path('bin/release')
     gcc_args = ['-O3']
 else:
-    build = Path('build/debug')
+    build = Path('bin/debug')
     gcc_args = []
 
 for f in src.rglob('*.c'):
