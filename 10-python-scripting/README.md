@@ -17,7 +17,7 @@ optimizations enabled (`-O3`) and save them in `./bin/release`.
     ```
     $ tree                                                                         master *=
     .
-    ├── build
+    ├── bin
     │   ├── debug
     │   │   ├── app
     │   │   └── numbers
@@ -206,14 +206,14 @@ Check for its existence first.
 **Exercise.**
 
 - For all `*.c` files in directory `./src`, create an appropriate
-    directory in `./build/debug`.
+    directory in `./bin/debug`.
 
     _Hint._ Use `rglob()`, `relative_to()`, `parent`, `mkdir(parents=True)`.
 
 - Compile each `*.c` file using `gcc` to a binary located in
-  `./build/debug`.
+  `./bin/debug`.
 
-    _Example._ `./src/app.c` should be compiled to `./build/debug/app`.
+    _Example._ `./src/app.c` should be compiled to `./bin/debug/app`.
 
     _Hint._ Remove suffix by `.with_suffix('')`. Convert a `Path` `f` to
     string using `str(f)`.
@@ -271,7 +271,7 @@ optional arguments:
 
 - Compile all `*.c` files in the `./src` directory as before, but based
   on the presence of the `-O` flag, compile them with or without
-  optimizations into the directory `./build/release` or `./build/debug`.
+  optimizations into the directory `./bin/release` or `./bin/debug`.
 
 ## Checking modification time
 
@@ -310,4 +310,4 @@ os.stat_result(st_mode=33188, st_ino=8604286092, st_dev=16777220, st_nlink=1, st
   the same name.
 
     _Example._ `src/app.c` and `src/app.cpp` compile to the same
-    `build/debug/app`. The user should be warned when this happens :)
+    `bin/debug/app`. The user should be warned when this happens :)
